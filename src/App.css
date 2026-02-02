@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Alegreya", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 5px #ffffff,
+      0 0 10px #ff0000,
+      0 0 20px #ff0000;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #ffffff,
+      0 0 25px #ff0000,
+      0 0 50px #ff0000;
+  }
+  100% {
+    text-shadow:
+      0 0 5px #ffffff,
+      0 0 10px #ff0000,
+      0 0 20px #ff0000;
+  }
+}
+
+/* Glowing floating headline */
+.floating-text {
+  font-size: 2.5rem;
+  color: #ffffff;
+  animation: float 3s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+}
+
+/* Image */
+.image-container img {
+  width: 800px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Glowing red text */
+.location-text {
+  color: #ff0000;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 15px #ff0000,
+    0 0 30px #ff0000;
+}
